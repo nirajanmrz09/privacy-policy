@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Plant Care</title>
+  <meta name="description" content="Privacy Policy for the Plant Care mobile application by Amisub Solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-900: #064E3B;
+      --green-700: #047857;
+      --green-500: #059669;
+      --green-100: #D1FAE5;
+      --green-50:  #ECFDF5;
+      --gray-900:  #111827;
+      --gray-700:  #374151;
+      --gray-500:  #6B7280;
+      --gray-300:  #D1D5DB;
+      --gray-200:  #E5E7EB;
+      --gray-100:  #F9FAFB;
+      --white:     #FFFFFF;
+    }
+
+    html, body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #F0FDF8;
+      color: var(--gray-700);
+      line-height: 1.8;
+      min-height: 100%;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--green-900) 0%, #065f46 50%, var(--green-500) 100%);
+      color: #fff;
+      padding: 72px 24px 100px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 40px;
+      padding: 6px 18px;
+      font-size: 13px; font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 17px;
+      opacity: .82;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .hero-chips {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+    }
+    .hero-chip {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px; font-weight: 600;
+    }
+
+    /* ── WRAPPER ── */
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── FLOATING META CARD ── */
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 18px 24px;
+      margin: -44px 0 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.10);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      z-index: 10;
+    }
+    .meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .meta-item strong { color: var(--gray-900); }
+    .meta-item span { color: var(--gray-500); }
+    .meta-sep { width: 1px; background: var(--gray-200); align-self: stretch; }
+
+    /* ── SECTION CARD ── */
+    .card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+    @media (max-width: 600px) {
+      .card { padding: 24px 18px; }
+      .meta-bar { flex-direction: column; }
+    }
+
+    .card-title {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--green-50);
+    }
+    .card-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: var(--green-50);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .card-title h2 {
+      font-size: 19px; font-weight: 700;
+      color: var(--green-900);
+    }
+
+    h3 {
+      font-size: 15px; font-weight: 600;
+      color: var(--green-700);
+      margin: 20px 0 10px;
+    }
+    p { font-size: 15px; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 22px; margin-bottom: 10px; }
+    li { font-size: 15px; margin-bottom: 7px; }
+    strong { color: var(--gray-900); }
+
+    /* ── HIGHLIGHT ── */
+    .note {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: var(--green-50);
+      border-left: 4px solid var(--green-500);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .note-icon { font-size: 18px; flex-shrink: 0; }
+    .note p { font-size: 14px; color: var(--green-900); margin: 0; font-weight: 500; }
+
+    /* ── SERVICE GRID ── */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .service-card {
+      background: var(--gray-100);
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid var(--gray-200);
+    }
+    .service-card .s-name { font-weight: 700; font-size: 14px; color: var(--gray-900); }
+    .service-card .s-desc { font-size: 12px; color: var(--gray-500); margin-top: 4px; line-height: 1.5; }
+    .service-card .s-tag {
+      display: inline-block;
+      background: var(--green-100);
+      color: var(--green-700);
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    /* ── RIGHTS GRID ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .right-item {
+      background: var(--green-50);
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid var(--green-100);
+      text-align: center;
+    }
+    .right-item .r-icon { font-size: 24px; margin-bottom: 8px; }
+    .right-item .r-title { font-size: 13px; font-weight: 700; color: var(--green-900); }
+    .right-item .r-desc  { font-size: 11px; color: var(--green-700); margin-top: 4px; }
+
+    /* ── CONTACT ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--green-900) 0%, #065f46 100%);
+      color: var(--white);
+      border: none;
+    }
+    .contact-card .card-title { border-bottom-color: rgba(255,255,255,.12); }
+    .contact-card h2 { color: var(--white) !important; }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 560px) { .contact-inner { grid-template-columns: 1fr; } }
+    .contact-details p { color: rgba(255,255,255,.85); margin-bottom: 6px; font-size: 15px; }
+    .contact-details strong { color: #fff; }
+    .btn-contact {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff;
+      color: var(--green-900);
+      font-size: 14px; font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-contact:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 20px 48px;
+      color: var(--gray-500);
+      font-size: 13px;
+    }
+    footer p { margin-bottom: 8px; }
+    footer a { color: var(--green-700); text-decoration: none; font-weight: 500; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">🌿 Plant Care App</div>
+    <h1>Privacy Policy</h1>
+    <p>We are fully committed to protecting your personal information and being transparent about how we use it.</p>
+    <div class="hero-chips">
+      <span class="hero-chip">🔒 Data Protection</span>
+      <span class="hero-chip">🚫 No Data Selling</span>
+      <span class="hero-chip">🌍 GDPR Aware</span>
+      <span class="hero-chip">👶 COPPA Compliant</span>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <!-- META BAR -->
+    <div class="meta-bar">
+      <div class="meta-item"><span>📅</span><div><span>Last Updated</span><br><strong>April 17, 2025</strong></div></div>
+      <div class="meta-sep"></div>
+      <div class="meta-item"><span>🏢</span><div><span>Developer</span><br><strong>Amisub Solutions</strong></div></div>
+      <div class="meta-sep"></div>
+      <div class="meta-item"><span>📱</span><div><span>Application</span><br><strong>Plant Care</strong></div></div>
+      <div class="meta-sep"></div>
+      <div class="meta-item"><span>🆔</span><div><span>Bundle ID</span><br><strong>com.app.plantcare</strong></div></div>
+    </div>
+
+    <!-- 1. INTRODUCTION -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">👋</div>
+        <h2>Introduction</h2>
+      </div>
+      <p>
+        Welcome to <strong>Plant Care</strong>, a mobile application developed and operated by <strong>Amisub Solutions</strong>. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application on iOS or Android devices.
+      </p>
+      <p>By downloading and using Plant Care, you agree to the collection and use of information in accordance with this policy. If you disagree with any part, please discontinue use of the application.</p>
+      <div class="note">
+        <div class="note-icon">ℹ️</div>
+        <p>This policy applies to all users worldwide. Our servers and third-party services may be located outside your country of residence.</p>
+      </div>
+    </div>
+
+    <!-- 2. INFORMATION WE COLLECT -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">🗂️</div>
+        <h2>Information We Collect</h2>
+      </div>
+
+      <h3>Information You Provide</h3>
+      <ul>
+        <li><strong>Account credentials</strong> – name, email address, and password when you register.</li>
+        <li><strong>Profile picture</strong> – if you choose to upload one from your device gallery.</li>
+        <li><strong>Plant images</strong> – photos you capture or select for AI-powered identification and diagnosis.</li>
+      </ul>
+
+      <h3>Information Collected Automatically</h3>
+      <ul>
+        <li><strong>Device location</strong> – used only to fetch real-time local weather data for gardening advice.</li>
+        <li><strong>Scan history</strong> – plant identification records stored to your account in the cloud.</li>
+        <li><strong>Usage data</strong> – app interactions and feature usage to improve performance.</li>
+        <li><strong>Device information</strong> – operating system, device model, and app version.</li>
+      </ul>
+
+      <h3>Information from Third Parties</h3>
+      <ul>
+        <li><strong>Google Sign-In</strong> – if you use this, we receive your public profile (name, email, avatar).</li>
+        <li><strong>Subscription data</strong> – purchase status and tier from RevenueCat's payment platform.</li>
+      </ul>
+    </div>
+
+    <!-- 3. HOW WE USE YOUR INFO -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">⚙️</div>
+        <h2>How We Use Your Information</h2>
+      </div>
+      <ul>
+        <li>To create and manage your user account across devices.</li>
+        <li>To provide AI-powered plant identification and health diagnosis via Google Gemini.</li>
+        <li>To display personalised daily plant care tips from our Firestore database.</li>
+        <li>To fetch real-time local weather data and provide gardening maintenance alerts.</li>
+        <li>To manage your Pro subscription and unlock premium features.</li>
+        <li>To sync your entire plant scan history across all your devices.</li>
+        <li>To send optional daily watering reminders (push notifications).</li>
+        <li>To serve advertisements to free-tier users via Google AdMob.</li>
+        <li>To monitor app stability, diagnose crashes, and improve performance.</li>
+      </ul>
+    </div>
+
+    <!-- 4. THIRD-PARTY SERVICES -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">🔌</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>Plant Care integrates the following third-party services, each governed by their own Privacy Policy:</p>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="s-name">Firebase (Google)</div>
+          <div class="s-desc">User authentication and Firestore database for accounts and scan history.</div>
+          <span class="s-tag">Auth · Database</span>
+        </div>
+        <div class="service-card">
+          <div class="s-name">Google Gemini AI</div>
+          <div class="s-desc">AI model used to identify plants and diagnose health issues from images.</div>
+          <span class="s-tag">AI Processing</span>
+        </div>
+        <div class="service-card">
+          <div class="s-name">OpenWeatherMap</div>
+          <div class="s-desc">Provides real-time weather data based on your geographic location.</div>
+          <span class="s-tag">Location · Weather</span>
+        </div>
+        <div class="service-card">
+          <div class="s-name">RevenueCat</div>
+          <div class="s-desc">Manages in-app Pro subscriptions and purchase verification.</div>
+          <span class="s-tag">Payments</span>
+        </div>
+        <div class="service-card">
+          <div class="s-name">Google AdMob</div>
+          <div class="s-desc">Delivers advertising to free-tier users within the app.</div>
+          <span class="s-tag">Advertising</span>
+        </div>
+        <div class="service-card">
+          <div class="s-name">Google Maps</div>
+          <div class="s-desc">Used for location-based plant shop and map features.</div>
+          <span class="s-tag">Maps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. DATA SHARING -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">🤝</div>
+        <h2>Data Sharing &amp; Disclosure</h2>
+      </div>
+      <p>We <strong>do not sell, trade, or rent</strong> your personal information to third parties. Data may be shared only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service Providers</strong> – with the third-party vendors listed above, solely to operate the app's features.</li>
+        <li><strong>Legal Requirements</strong> – if required by law, court order, or enforceable governmental request.</li>
+        <li><strong>Safety</strong> – to protect the rights, property, or safety of Amisub Solutions, our users, or the public.</li>
+        <li><strong>Business Transfer</strong> – in the event of a merger or acquisition. You will be notified in advance.</li>
+      </ul>
+    </div>
+
+    <!-- 6. STORAGE & SECURITY -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">🔒</div>
+        <h2>Data Storage &amp; Security</h2>
+      </div>
+      <p>Your data is stored securely using <strong>Google Firebase Firestore</strong>, which provides industry-standard encryption both at rest and in transit (TLS/SSL).</p>
+      <p>Plant images submitted for AI analysis are processed by the <strong>Google Gemini API</strong> and are <strong>not permanently stored</strong> on our servers after the identification session ends.</p>
+      <div class="note">
+        <div class="note-icon">⚠️</div>
+        <p>No method of transmission over the Internet is 100% secure. While we implement best-practice security measures, we cannot guarantee absolute security.</p>
+      </div>
+    </div>
+
+    <!-- 7. YOUR RIGHTS -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">🧑‍⚖️</div>
+        <h2>Your Rights</h2>
+      </div>
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="r-icon">👁️</div>
+          <div class="r-title">Access</div>
+          <div class="r-desc">Request a copy of your personal data.</div>
+        </div>
+        <div class="right-item">
+          <div class="r-icon">✏️</div>
+          <div class="r-title">Correct</div>
+          <div class="r-desc">Update your info via the Profile screen.</div>
+        </div>
+        <div class="right-item">
+          <div class="r-icon">🗑️</div>
+          <div class="r-title">Delete</div>
+          <div class="r-desc">Request account and data deletion.</div>
+        </div>
+        <div class="right-item">
+          <div class="r-icon">🔕</div>
+          <div class="r-title">Notifications</div>
+          <div class="r-desc">Opt out via device settings anytime.</div>
+        </div>
+        <div class="right-item">
+          <div class="r-icon">📵</div>
+          <div class="r-title">Ads</div>
+          <div class="r-desc">Opt out via your device's ad settings.</div>
+        </div>
+        <div class="right-item">
+          <div class="r-icon">📦</div>
+          <div class="r-title">Portability</div>
+          <div class="r-desc">Request a copy of your data in a portable format.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. CHILDREN -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">👶</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Plant Care is <strong>not directed to children under the age of 13</strong>. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately so we can take appropriate action to remove the data.</p>
+    </div>
+
+    <!-- 9. CHANGES -->
+    <div class="card">
+      <div class="card-title">
+        <div class="card-icon">📝</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the "Last Updated" date at the top of this page and, where appropriate, via an in-app notification. Your continued use of the application after such changes constitutes your acceptance of the updated policy.</p>
+      <div class="note">
+        <div class="note-icon">💡</div>
+        <p>We recommend reviewing this policy periodically to stay informed about how we protect your information.</p>
+      </div>
+    </div>
+
+    <!-- 10. CONTACT -->
+    <div class="card contact-card">
+      <div class="card-title">
+        <div class="card-icon" style="background:rgba(255,255,255,.1);">✉️</div>
+        <h2>Contact Us</h2>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-details">
+          <p>Have questions or concerns about this Privacy Policy? We are here to help.</p>
+          <p style="margin-top:14px;"><strong>Company:</strong> Amisub Solutions</p>
+          <p><strong>Application:</strong> Plant Care</p>
+          <p><strong>Email:</strong> amisubsolutions@gmail.com</p>
+        </div>
+        <a class="btn-contact" href="mailto:amisubsolutions@gmail.com">
+          📬 Contact Us
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /wrapper -->
+
+  <footer>
+    <p>© 2025 <strong>Amisub Solutions</strong> · Plant Care App · All rights reserved.</p>
+    <div class="footer-links" style="margin-top:10px;">
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a>
+      <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy</a>
+      <a href="https://openweathermap.org/privacy-policy" target="_blank" rel="noopener">OpenWeatherMap Privacy</a>
+    </div>
+  </footer>
+
+</body>
+</html>
